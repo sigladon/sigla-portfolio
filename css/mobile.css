@@ -89,6 +89,12 @@ body {
     color: var(--color-gray2);
 }
 
+.social-media a {
+    font-size: 1.8em;
+    color: var(--color-ter);
+    text-decoration: none;
+}
+
 .about-me__description {
     margin: 0.4em 0.4em;
     font-family: var(--lato);
