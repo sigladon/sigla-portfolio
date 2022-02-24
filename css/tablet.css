@@ -7,3 +7,7 @@
     grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
 }
 
+.main {
+    overflow-y: scroll;
+}
+
