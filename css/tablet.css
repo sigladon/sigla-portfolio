@@ -1,0 +1,9 @@
+.page {
+    grid-template-columns: 30em 1fr;
+}
+
+.projects-container, .hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
+}
+

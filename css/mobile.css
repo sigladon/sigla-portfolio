@@ -6,6 +6,22 @@
 
 :root {
 /*-- Font Size --*/
+    --am-name: 2.4rem;
+    --am-rol: 1.6rem;
+    --am-contact: 1.4rem;
+    --am-description: 1.8rem;
+    --hb-title: 2rem;
+    --hb-hability: 1.2rem;
+    --pr-title: 1.8rem;
+    --pr-tags: 1.4rem;
+    --pr-pro-tags: 1rem;
+    --pr-pro-title: 1.6rem;
+    --pr-pro-des: 1.2rem;
+    --pr-pro-btn: 1rem;
+    --ho-title: 1.8rem;
+    --ho-card-title: 1.4rem;
+    --ho-card-des: 1.2rem;
+
 
 /*-- Family Fonts --*/
     --lato: 'Lato', sans-serif; /* 300 */
@@ -25,6 +41,30 @@
     --color-gray6: #f2f2f2;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    padding: 4px;
+    background-color: rgba(153, 114, 48, 0.44);
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(237, 144, 23, 1); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-pri); 
+}
+
+
 html {
     font-size: 62.5%;
 }
@@ -36,8 +76,6 @@ h1, h2 {
 
 section {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 32em;
-    margin: 1em auto;
     padding: 2em;
     border-radius: 1em;
     background-color: var(--color-bg);
@@ -51,11 +89,17 @@ body {
 }
 
 .page {
-    padding: 1em 0;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
+    display: grid;
 }
 
-.about-me {
+.aside {
+    padding: 1em 2em 0;
+}
+
+.about-me, .habilities {
+    margin: 2em 0;
 }
 
 .about-me__photo {
@@ -70,14 +114,14 @@ body {
 
 .about-me__name {
     margin: 0.2em 0.4em;
-    font-size: 2.4em;
+    font-size: var(--am-name);
     font-weight: 700;
     color: var(--color-fg);
 }
 
 .about-me__rol {
     margin: 0.4em 0.6em;
-    font-size: 1.6em;
+    font-size: var(--am-rol);
     font-weight: 500;
     color: var(--color-gray1);
 }
@@ -85,12 +129,12 @@ body {
 .about-me__contact {
     margin: 0.2em 0.6em;
     font-family: var(--lato);
-    font-size: 1.5em;
+    font-size: var(--am-contact);
     color: var(--color-gray2);
 }
 
 .social-media a {
-    font-size: 1.8em;
+    font-size: var(--am-description);
     color: var(--color-ter);
     text-decoration: none;
 }
@@ -98,7 +142,7 @@ body {
 .about-me__description {
     margin: 0.4em 0.4em;
     font-family: var(--lato);
-    font-size: 1.8em;
+    font-size: var(--am-description);
     color: var(--color-gray1);
 }
 
@@ -106,7 +150,7 @@ body {
 }
 
 .habilities__title {
-    font-size: 2em;
+    font-size: var(--hb-title);
     margin: 0.4em;
 }
 
@@ -125,7 +169,7 @@ body {
     position: absolute;
     left: 0;
     width: 8em;
-    font-size: 1.2em;
+    font-size: var(--hb-hability);
     font-family: var(--lato);
 }
 
@@ -150,17 +194,25 @@ body {
 #cssBar {width: 60%;}
 #javascriptBar {width: 20%;}
 
+.main {
+    padding: 0 2em 1em;
+}
+
+.main section {
+    margin: 2em 0;
+}
+
 .projects__top-bar {
     margin: 1em 0.8em 2em;
 }
 
 .projects__top-bar h2 {
-    font-size: 1.8em;
+    font-size: var(--pr-title);
     margin: 0.8em 0;
 }
 
 .btn-tag {
-    font-size: 1.4em;
+    font-size: var(--pr-tags);
     font-family: var(--oswald);
     text-transform: uppercase;
     font-weight: 300;
@@ -203,6 +255,7 @@ body {
 }
 
 .project__tags ul {
+    font-size: var(--pr-pro-tags);
     font-family: var(--lato);
     display: flex;
     list-style: none;
@@ -213,13 +266,13 @@ body {
 }
 
 .project__title {
-    font-size: 1.6em;
+    font-size: var(--pr-pro-title);
     font-family: var(--roboto);
     margin: 0.4em 0.4em;
 }
 
 .project__description {
-    font-size: 1.2em;
+    font-size: var(--pr-pro-des);
     font-family: var(--lato);
     font-weight: 400;
     text-align: justify;
@@ -230,7 +283,7 @@ body {
 .project__btn-demo,
 .project__btn-code {
     position: relative;
-    font-size: 1.2em;
+    font-size: var(--pr-pro-btn);
     font-family: var(--roboto);
     padding: 0.4em 0.4em 0.2em;
     margin: 0.4em 0 0.4em 0.6em;
@@ -251,7 +304,7 @@ body {
 
 .hobbies__title {
     margin: 0.4em;
-    font-size: 1.8em;
+    font-size: var(--ho-title);
 }
 
 .hobbie {
@@ -274,7 +327,7 @@ body {
 
 .hobbie__name {
     margin: 0.4em;
-    font-size: 1.4em;
+    font-size: var(--ho-card-title);
     font-family: var(--lato);
     color: var(--color-ter);
 }
@@ -282,6 +335,6 @@ body {
 .hobbie__description {
     margin: 0.6em;
     font-family: var(--lato);
-    font-size: 1.2em;
+    font-size: var(--ho-card-des);
     color: var(--color-gray2);
 }

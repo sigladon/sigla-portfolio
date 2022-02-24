@@ -1,0 +1,27 @@
+:root {
+/*-- Font Size --*/
+    --am-name: 3.8rem;
+    --am-rol: 2.4rem;
+    --am-contact: 1.8rem;
+    --am-description: 2.2rem;
+    --hb-title: 2.8rem;
+    --hb-hability: 1.4rem;
+    --pr-title: 2.8rem;
+    --pr-tags: 1.8rem;
+    --pr-pro-tags: 1.4rem;
+    --pr-pro-title: 2rem;
+    --pr-pro-des: 1.6rem;
+    --pr-pro-btn: 1.4rem;
+    --ho-title: 2.8rem;
+    --ho-card-title: 1.6rem;
+    --ho-card-des: 1.4rem;
+}
+
+.page {
+    grid-template-columns: 44em 1fr;
+}
+
+.projects-container, .hobbies-container {
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+}
+
